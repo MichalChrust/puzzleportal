@@ -1,0 +1,16 @@
+#wholeWeb {
+  display: flex;
+  flex-direction: column;
+  background-color: #EEE9E5;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 1%;
+  padding-top: 1%;
+  padding-right: 1%;
+  padding-left: 1%;
+  border: solid 2px #808080;
+  border-radius: 7px;
+}
+
+
+

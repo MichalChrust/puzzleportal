@@ -1,0 +1,16 @@
+<div id="background-area">
+  <div id="wholeWeb">
+    <!--  Logo and navbar  -->
+    <div>
+      <app-header [isUserLogged]="isUserLogged"></app-header>
+    </div>
+    <!--  Page content  -->
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <!--  Footer  -->
+  <div>
+    <app-footer></app-footer>
+  </div>
+</div>

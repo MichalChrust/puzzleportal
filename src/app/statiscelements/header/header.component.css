@@ -1,0 +1,19 @@
+#logo {
+  width: 100%;
+  height: auto;
+  border-radius: 5px
+}
+
+.menu-item {
+  text-align: center;
+  background-color: #545454;
+  color: white;
+  text-decoration: none;
+  font-size: 150%;
+}
+
+.menu-item:focus{
+  background-color: #767676;
+}
+
+

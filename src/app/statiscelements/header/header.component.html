@@ -1,0 +1,15 @@
+<div >
+  <a routerLink="/home"><img id="logo" src="assets/images/logo2.png" height="80" width="600" class="img-responsive"></a>
+
+  <div class="btn-group btn-group-justified" style="padding-top: 1%">
+    <a routerLink="/home" class="btn menu-item" routerLinkActive="active">{{mainPage}}</a>
+    <a routerLink="/allgames" class="btn menu-item" routerLinkActive="active">{{allGames}}</a>
+    <a routerLink="/rank" class="btn menu-item" routerLinkActive="active">{{rank}}</a>
+    <a routerLink="/rules" class="btn menu-item" routerLinkActive="active">{{rules}}</a>
+    <a routerLink="/help" class="btn menu-item" routerLinkActive="active">{{help}}</a>
+    <a routerLink="/login" class="btn menu-item" routerLinkActive="active" *ngIf='isUserLogged === false'>{{logIn}}</a>
+    <a routerLink="/account" class="btn menu-item" routerLinkActive="active" *ngIf='isUserLogged === true'>{{account}}</a>
+  </div>
+</div>
+
+
