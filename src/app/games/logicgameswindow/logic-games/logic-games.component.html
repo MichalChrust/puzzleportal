@@ -1,1 +1,7 @@
-<p>logic-games works!</p>
+<div>
+  <div *ngFor="let game of games; let i = index">
+    <h2>{{game.text}}</h2>
+    <button (click)='go(i)'>Przejdź do {{game.text}}</button>
+  </div>
+</div>
+

@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LeftlabelComponent } from './leftlabel.component';
+import { QuizLeftLabelComponent } from './quiz-left-label.component';
 
-describe('LeftlabelComponent', () => {
-  let component: LeftlabelComponent;
-  let fixture: ComponentFixture<LeftlabelComponent>;
+describe('QuizLeftLabelComponent', () => {
+  let component: QuizLeftLabelComponent;
+  let fixture: ComponentFixture<QuizLeftLabelComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LeftlabelComponent ]
+      declarations: [ QuizLeftLabelComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LeftlabelComponent);
+    fixture = TestBed.createComponent(QuizLeftLabelComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

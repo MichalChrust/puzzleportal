@@ -1,0 +1,13 @@
+to build components:
+footer
+quiz-left-label
+logic-games-left-label
+quiz-games
+logic-games
+
+
+to repair:
+ranking
+
+to end:
+-in help component create button to upload files
