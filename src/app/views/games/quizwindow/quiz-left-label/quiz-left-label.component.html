@@ -1,0 +1,6 @@
+<div class="list-group" style="margin-top: 10%">
+  <p id="table-header" class="list-group-item list-group-item-text">Wszystkie zagadki:</p>
+  <div *ngFor="let game of games; let i = index">
+    <a (click)='go(i)' class="list-group-item list-group-item-action list-group-item-success">Zagadka {{i +1}}</a>
+  </div>
+</div>
