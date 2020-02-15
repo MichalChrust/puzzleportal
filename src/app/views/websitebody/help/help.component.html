@@ -5,7 +5,7 @@
       <div class="form-group" style="padding-top: 5%">
         <label for="inputIssueType" class="control-label col-xs-3">Rodzaj zgłoszenia</label>
         <div class="col-xs-7">
-          <select class="form-control" id="inputIssueType">
+          <select class="form-control" id="inputIssueType" name="selectMessageType" [(ngModel)]="messageType">
             <option selected>Wybierz</option>
             <option>Zgłoszenie złamiania regulaminu przez innego użytkownika</option>
             <option>Nie otrzymałem linku aktywacyjnego konto</option>
@@ -41,19 +41,11 @@
           <span *ngIf="emailInvalid" style="color: red">Podaj poprawny adres email</span>
         </div>
       </div>
-      <!--      -->
-      <div class="file">
-        <label for="validatedCustomFile">Choose file...</label>
-        <div class="col-xs-7">
-          <input type="file" id="validatedCustomFile">
-        </div>
-      </div>
-      <!--      -->
       <div class="form-group">
         <div class="col-xs-offset-3 col-xs-2 ">
           <button type="submit"
                   class="btn btn-default"
-                  routerLink=""
+
                   [disabled]="emailStatus !== 0 || messageStatus !== 0"
                   (click)="sendMessage()">
             Wyślij

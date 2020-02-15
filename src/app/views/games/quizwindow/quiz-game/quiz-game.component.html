@@ -1,11 +1,11 @@
 <div class="container-fluid">
   <div class="col-xs-2">
-    <div *ngFor="let gameData of game">
-      <div *ngFor="let questions of gameData.questions; let i = index">
-        <div class="list-group">
-          <div class="list-group-item list-group-item-action list-group-item-success">
-            Pytanie {{i + 1}}
-          </div>
+    <div class="list-group">
+      <div *ngFor="let gameData of game">
+        <div *ngFor="let questions of gameData.questions; let i = index">
+            <div class="list-group-item list-group-item-action list-group-item-success" *ngIf="i == 0">
+              Pytanie {{i + 1}}
+            </div>
         </div>
       </div>
     </div>

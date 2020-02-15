@@ -1,5 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import {HelpMessage} from '../models/HelpMessage';
 
 
 @Injectable({
@@ -11,10 +12,11 @@ export class HelpService {
 
   }
 
-  // eslint-disable-next-line
-  createCourse(message) {
-    console.log('executed service')
-    return this.http.post<Object>(`http://localhost:8080/help`, message);
-  }
 
+  // eslint-disable-next-line
+  createCourse(helpMessage: HelpMessage) {
+    console.log('executed service');
+    // tslint:disable-next-line:ban-types
+    return this.http.post<HelpMessage>(`http://localhost:8080/help`, helpMessage);
+  }
 }

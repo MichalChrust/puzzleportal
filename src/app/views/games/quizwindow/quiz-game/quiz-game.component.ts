@@ -8,6 +8,7 @@ import {Component, DoCheck, OnChanges, OnInit} from '@angular/core';
 export class QuizGameComponent implements OnInit {
   id;
   game;
+  currentQuestionIndex = 0;
 
   constructor() { }
   ngOnInit() {
