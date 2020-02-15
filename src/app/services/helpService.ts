@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Course } from '../model/Course';
 
 
 @Injectable({
@@ -13,9 +12,9 @@ export class HelpService {
   }
 
   // eslint-disable-next-line
-  createCourse(name, course) {
+  createCourse(message) {
     console.log('executed service')
-    return this.http.post<Object>(`http://localhost:8080/instructors/${name}/courses/`, course);
+    return this.http.post<Object>(`http://localhost:8080/help`, message);
   }
 
 }
