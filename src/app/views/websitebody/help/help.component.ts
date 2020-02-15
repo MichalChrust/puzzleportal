@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {MainPageComponent} from '../main-page/main-page.component';
+import {HelpService} from '../../../services/HelpService';
 
 @Component({
   selector: 'app-help',
@@ -13,7 +13,7 @@ export class HelpComponent implements OnInit {
   message = '';
   messageStatus = 2;
   messageInvalid = false;
-  constructor() {
+  constructor(private helpService: HelpService) {
   }
 
   ngOnInit() {
@@ -37,5 +37,8 @@ export class HelpComponent implements OnInit {
       this.messageInvalid = false;
       console.log(this.messageStatus);
     }
+  }
+  sendMessage() {
+    this.helpService.createCourse(this.message);
   }
 }

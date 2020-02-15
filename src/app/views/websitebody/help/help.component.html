@@ -54,7 +54,8 @@
           <button type="submit"
                   class="btn btn-default"
                   routerLink=""
-                  [disabled]="emailStatus !== 0 || messageStatus !== 0">
+                  [disabled]="emailStatus !== 0 || messageStatus !== 0"
+                  (click)="sendMessage()">
             Wyślij
           </button>
         </div>
