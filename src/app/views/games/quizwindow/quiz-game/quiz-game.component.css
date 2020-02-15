@@ -1,0 +1,23 @@
+.btn {
+  font-size: 150%;
+}
+
+#table-header{
+  background-color: grey;
+  font-size: 150%;
+  color: white;
+  text-align: center;
+}
+
+.list-group-item-success {
+  background-color: #545454;
+  color: white;
+  text-align: center;
+  font-size: 125%;
+}
+
+.list-group-item-success:hover {
+  background-color: #767676;
+  color: white;
+  font-size: 125%;
+}
