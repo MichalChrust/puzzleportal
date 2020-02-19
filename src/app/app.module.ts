@@ -29,6 +29,8 @@ import { LogicGameComponent } from './views/games/logicgameswindow/logic-game/lo
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
 import { QuizGameComponent } from './views/games/quizwindow/quiz-game/quiz-game.component';
+import { QuestionComponent } from './views/games/quizwindow/question/question.component';
+import { QuizResultsComponent } from './views/games/quizwindow/quiz-results/quiz-results.component';
 
 registerLocaleData(zh);
 
@@ -46,6 +48,7 @@ const appRoutes: Routes = [
   { path: 'logicgame/:id', component: LogicGameComponent},
   { path: 'quizgame', component: QuizGamesComponent},
   { path: 'quizgame/:id', component: QuizGameComponent},
+  { path: 'quizgame/:id/results', component: QuizResultsComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full'},
   // { path: '**', component: PageNotFoundComponent }
 ];
@@ -70,6 +73,8 @@ const appRoutes: Routes = [
     LogicGamesLeftLabelComponent,
     LogicGameComponent,
     QuizGameComponent,
+    QuestionComponent,
+    QuizResultsComponent,
   ],
   imports: [
     BrowserModule,

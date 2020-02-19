@@ -3,7 +3,9 @@
   <div *ngFor="let category of categories.categories">
     <p id="table-header" class="list-group-item list-group-item-text">{{category.category}}</p>
     <div *ngFor="let game of games; let i = index;" >
-      <a *ngIf="game.category == category.id;" (click)='go(i)' class="list-group-item list-group-item-action list-group-item-success" style="cursor: pointer">Quiz {{i +1}}</a>
+      <a *ngIf="game.category == category.id;" (click)='go(i)'
+         class="list-group-item list-group-item-action list-group-item-success"
+         style="cursor: pointer">Quiz {{i +1}}</a>
     </div>
   </div>
 </div>

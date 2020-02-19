@@ -1,23 +1,8 @@
-.btn {
-  font-size: 150%;
-}
-
-#table-header{
-  background-color: grey;
-  font-size: 150%;
-  color: white;
-  text-align: center;
-}
-
-.list-group-item-success {
+.answer-button {
   background-color: #545454;
-  color: white;
-  text-align: center;
-  font-size: 125%;
+  border-radius: 0px;
 }
 
-.list-group-item-success:hover {
+.answer-button:hover {
   background-color: #767676;
-  color: white;
-  font-size: 125%;
 }

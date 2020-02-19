@@ -1,0 +1,16 @@
+#ranking-table {
+  margin-top: 2%;
+  border-radius: 15px;
+  background-color: #545454;
+  color: white;
+  font-size: 150%;
+}
+
+.table-row:hover {
+  background-color: #767676;
+}
+
+#table-head {
+  background-color: #767676;
+  border-top-left-radius: 15px;
+}
