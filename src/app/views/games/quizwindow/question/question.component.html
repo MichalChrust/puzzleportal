@@ -1,0 +1,43 @@
+<div>
+  <h2 style="text-align: center; padding-top: 1%">{{question.question}}</h2>
+  <div style="padding-top: 3%; padding-bottom: 5%">
+    <div>
+      <div style="padding-left: 20%; padding-right: 20%">
+        <button [ngStyle]="{backgroundColor: (((!isItResult && choosedAnswer === 'a')) ? '#213098' : '#545454') ||
+         (((isItResult) && (localUserAnswer === 'a') && (ifAnswerIsCorrect)) ? '#33cc33' : '#999999')
+        }"
+                class="btn btn-primary btn-block answer-button"
+                (click)="chooseAnswer(question.id, 'a')">
+          {{question.a}}
+        </button>
+      </div>
+    </div>
+    <div style="padding-top: 2%">
+      <div style="padding-left: 20%; padding-right: 20%">
+        <button [ngStyle]="{backgroundColor: ((!isItResult && choosedAnswer === 'b') || (isItResult && localUserAnswer === 'b')) ? '#213098' : '#545454'}"
+                class="btn btn-primary btn-block answer-button"
+                (click)="chooseAnswer(question.id,'b')">
+          {{question.b}}
+        </button>
+      </div>
+    </div>
+    <div style="padding-top: 2%">
+      <div style="padding-left: 20%; padding-right: 20%">
+        <button [ngStyle]="{backgroundColor: ((!isItResult && choosedAnswer === 'c') || (isItResult && localUserAnswer === 'c')) ? '#213098' : '#545454'}"
+                class="btn btn-primary btn-block answer-button"
+                (click)="chooseAnswer(question.id,'c')">
+          {{question.c}}
+        </button>
+      </div>
+    </div>
+    <div style="padding-top: 2%">
+      <div style="padding-left: 20%; padding-right: 20%">
+        <button [ngStyle]="{backgroundColor: ((!isItResult && choosedAnswer === 'd') || (isItResult && localUserAnswer === 'd')) ? '#213098' : '#545454'}"
+                class="btn btn-primary btn-block answer-button"
+                (click)="chooseAnswer(question.id,'d')">
+          {{question.d}}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

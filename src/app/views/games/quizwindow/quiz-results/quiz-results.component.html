@@ -1,0 +1,16 @@
+<div class="container-fluid">
+  WYNIKI
+  <div style="margin-bottom: 9%; margin-top: 3%">
+    <div *ngFor="let question of quiz.questions; let i = index">
+      <app-question [question]="question"
+                    [isItResult]="true"
+                    [userAnswer]="answers[i]"
+      ></app-question>
+    </div>
+  </div>
+  <button class="btn btn-primary answer-button"
+          style="margin-left: 80%; margin-bottom: 5%"
+          routerLink="/quizgame">
+    Powrót
+  </button>
+</div>

@@ -1,0 +1,18 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-quiz-results',
+  templateUrl: './quiz-results.component.html',
+  styleUrls: ['./quiz-results.component.css']
+})
+export class QuizResultsComponent implements OnInit {
+  quiz;
+  answers;
+
+  constructor() { }
+
+  ngOnInit() {
+    this.quiz = history.state.questions;
+    this.answers = history.state.answers;
+  }
+}

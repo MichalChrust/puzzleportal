@@ -34,15 +34,12 @@ export class HelpComponent implements OnInit {
     if (this.message.length < 1 || this.message.length > 500) {
        this.messageStatus = 1;
        this.messageInvalid = true;
-       console.log(this.messageStatus);
     } else {
       this.messageStatus = 0;
       this.messageInvalid = false;
-      console.log(this.messageStatus);
     }
   }
   sendMessage() {
-    console.log(this.messageType)
     // tslint:disable-next-line:max-line-length
     this.helpMessage = new HelpMessage(this.messageType, this.message, this.email);
     this.helpService.createCourse(this.helpMessage).subscribe(helpMessage => this.helpMessage.valueOf());
