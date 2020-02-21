@@ -9,56 +9,63 @@
       </tr>
       </thead>
       <tbody style="text-align: center">
-      <tr class="table-row">
-        <td>1</td>
-        <td>Default</td>
-        <td>12313</td>
-      </tr>
-      <tr class="table-row">
-        <td>2</td>
-        <td>Success</td>
-        <td>12308</td>
-      </tr>
-      <tr class="table-row">
-        <td>3</td>
-        <td>Danger</td>
-        <td>12300</td>
-      </tr>
-      <tr class="table-row">
-        <td>4</td>
-        <td>Info</td>
-        <td>12280</td>
-      </tr>
-      <tr class="table-row">
-        <td>5</td>
-        <td>Warning</td>
-        <td>12278</td>
-      </tr>
-      <tr class="table-row">
-        <td>6</td>
-        <td>Active</td>
-        <td>12253</td>
-      </tr>
-      <tr class="table-row">
-        <td>7</td>
-        <td>Mihix523</td>
-        <td>12250</td>
-      </tr>
-      <tr class="table-row">
-        <td>8</td>
-        <td>Szymix</td>
-        <td>12234</td>
-      </tr>
-      <tr class="table-row">
-        <td>9</td>
-        <td>Olix</td>
-        <td>12230</td>
-      </tr>
-      <tr class="table-row">
-        <td>8</td>
-        <td>Tede223</td>
-        <td>12222</td>
-      </tr>
+      <div *ngFor="let user of topTenList">
+        <tr class="table-row">
+          <td>{{user.place}}</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </div>
+<!--      <tr class="table-row">-->
+<!--        <td>1</td>-->
+<!--        <td>Default</td>-->
+<!--        <td>12313</td>-->
+<!--      </tr>-->
+<!--      <tr class="table-row">-->
+<!--        <td>2</td>-->
+<!--        <td>Success</td>-->
+<!--        <td>12308</td>-->
+<!--      </tr>-->
+<!--      <tr class="table-row">-->
+<!--        <td>3</td>-->
+<!--        <td>Danger</td>-->
+<!--        <td>12300</td>-->
+<!--      </tr>-->
+<!--      <tr class="table-row">-->
+<!--        <td>4</td>-->
+<!--        <td>Info</td>-->
+<!--        <td>12280</td>-->
+<!--      </tr>-->
+<!--      <tr class="table-row">-->
+<!--        <td>5</td>-->
+<!--        <td>Warning</td>-->
+<!--        <td>12278</td>-->
+<!--      </tr>-->
+<!--      <tr class="table-row">-->
+<!--        <td>6</td>-->
+<!--        <td>Active</td>-->
+<!--        <td>12253</td>-->
+<!--      </tr>-->
+<!--      <tr class="table-row">-->
+<!--        <td>7</td>-->
+<!--        <td>Mihix523</td>-->
+<!--        <td>12250</td>-->
+<!--      </tr>-->
+<!--      <tr class="table-row">-->
+<!--        <td>8</td>-->
+<!--        <td>Szymix</td>-->
+<!--        <td>12234</td>-->
+<!--      </tr>-->
+<!--      <tr class="table-row">-->
+<!--        <td>9</td>-->
+<!--        <td>Olix</td>-->
+<!--        <td>12230</td>-->
+<!--      </tr>-->
+<!--      <tr class="table-row">-->
+<!--        <td>8</td>-->
+<!--        <td>Tede223</td>-->
+<!--        <td>12222</td>-->
+<!--      </tr>-->
       </tbody>
     </table>
   </div>

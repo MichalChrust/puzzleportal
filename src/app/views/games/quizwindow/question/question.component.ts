@@ -47,18 +47,17 @@ export class QuestionComponent implements OnInit {
 
   }
 
-  colorGreen() {
-
+  colorAnswer(answer: string) {
+    if ((this.isItResult) && (this.localUserAnswer === answer) && (this.ifAnswerIsCorrect)) {
+      return '#33cc33';
+    } else if ((this.isItResult) && (this.localUserAnswer === answer) && (!this.ifAnswerIsCorrect)) {
+      return '#ff0000';
+    } else if ((this.isItResult) && (this.question.correct === answer) && (!this.ifAnswerIsCorrect)) {
+      return '#666633';
+    } else {
+      return '#545454';
+    }
   }
-  // checkQuestion(answer) {
-  //   if (this.userAnswer === null) {
-  //     return false;
-  //   }
-  //   if (answer === this.userAnswer.answer) {
-  //     return true;
-  //   } else {
-  //     return false;
-  //   }
-  // }
+
 
 }

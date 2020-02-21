@@ -3,9 +3,7 @@
   <div style="padding-top: 3%; padding-bottom: 5%">
     <div>
       <div style="padding-left: 20%; padding-right: 20%">
-        <button [ngStyle]="{backgroundColor: (((!isItResult && choosedAnswer === 'a')) ? '#213098' : '#545454') ||
-         (((isItResult) && (localUserAnswer === 'a') && (ifAnswerIsCorrect)) ? '#33cc33' : '#999999')
-        }"
+        <button [ngStyle]="{backgroundColor: ((!isItResult && choosedAnswer === 'a') ? '#213098' : colorAnswer('a'))}"
                 class="btn btn-primary btn-block answer-button"
                 (click)="chooseAnswer(question.id, 'a')">
           {{question.a}}
@@ -14,7 +12,7 @@
     </div>
     <div style="padding-top: 2%">
       <div style="padding-left: 20%; padding-right: 20%">
-        <button [ngStyle]="{backgroundColor: ((!isItResult && choosedAnswer === 'b') || (isItResult && localUserAnswer === 'b')) ? '#213098' : '#545454'}"
+        <button [ngStyle]="{backgroundColor: ((!isItResult && choosedAnswer === 'b') ? '#213098' : colorAnswer('b'))}"
                 class="btn btn-primary btn-block answer-button"
                 (click)="chooseAnswer(question.id,'b')">
           {{question.b}}
@@ -23,7 +21,7 @@
     </div>
     <div style="padding-top: 2%">
       <div style="padding-left: 20%; padding-right: 20%">
-        <button [ngStyle]="{backgroundColor: ((!isItResult && choosedAnswer === 'c') || (isItResult && localUserAnswer === 'c')) ? '#213098' : '#545454'}"
+        <button [ngStyle]="{backgroundColor: ((!isItResult && choosedAnswer === 'c') ? '#213098' : colorAnswer('c'))}"
                 class="btn btn-primary btn-block answer-button"
                 (click)="chooseAnswer(question.id,'c')">
           {{question.c}}
@@ -32,7 +30,7 @@
     </div>
     <div style="padding-top: 2%">
       <div style="padding-left: 20%; padding-right: 20%">
-        <button [ngStyle]="{backgroundColor: ((!isItResult && choosedAnswer === 'd') || (isItResult && localUserAnswer === 'd')) ? '#213098' : '#545454'}"
+        <button [ngStyle]="{backgroundColor: ((!isItResult && choosedAnswer === 'd') ? '#213098' : colorAnswer('d'))}"
                 class="btn btn-primary btn-block answer-button"
                 (click)="chooseAnswer(question.id,'d')">
           {{question.d}}

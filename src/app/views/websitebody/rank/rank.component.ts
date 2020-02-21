@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {RankingService} from '../../../services/ranking-service';
+import {RankingUser} from '../../../models/RankingUser';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-rank',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RankComponent implements OnInit {
 
-  constructor() { }
+  topTenList: Observable<RankingUser>;
+
+  constructor(private rankingService: RankingService) { }
 
   ngOnInit() {
+    this.getTopTen();
+  }
+
+  getTopTen() {
+    this.topTenList = this.rankingService.getTopTen();
+    return this.topTenList;
   }
 
 }

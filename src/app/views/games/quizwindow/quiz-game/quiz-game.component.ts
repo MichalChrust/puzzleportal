@@ -1,6 +1,6 @@
-import {Component, DoCheck, OnChanges, OnInit, Output} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Answer} from '../../../../models/Answer';
-import {QuizService} from '../../../../services/QuizService';
+import {QuizService} from '../../../../services/quiz-service';
 import {Router} from '@angular/router';
 @Component({
   selector: 'app-quiz-game',

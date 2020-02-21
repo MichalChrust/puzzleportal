@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {HelpService} from '../../../services/HelpService';
+import {HelpService} from '../../../services/help-service';
 import {HelpMessage} from '../../../models/HelpMessage';
 
 @Component({
@@ -42,6 +42,6 @@ export class HelpComponent implements OnInit {
   sendMessage() {
     // tslint:disable-next-line:max-line-length
     this.helpMessage = new HelpMessage(this.messageType, this.message, this.email);
-    this.helpService.createCourse(this.helpMessage).subscribe(helpMessage => this.helpMessage.valueOf());
+    this.helpService.sendHelpMessage(this.helpMessage).subscribe(helpMessage => this.helpMessage.valueOf());
   }
 }
