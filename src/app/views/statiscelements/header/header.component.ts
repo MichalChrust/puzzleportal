@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {AccountService} from '../../../services/account.service';
 
 @Component({
   selector: 'app-header',
@@ -14,12 +15,12 @@ export class HeaderComponent implements OnInit {
   help = 'Pomoc';
   logIn = 'Zaloguj się';
   account = 'Konto';
-  // userStatus = new UserstatusModel(false);
   //
-  constructor() {
+  constructor(private accountService: AccountService) {
   }
 
   ngOnInit() {
+    this.isUserLogged = false;
   }
 
 }

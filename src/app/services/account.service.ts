@@ -5,13 +5,13 @@ import {HelpMessage} from '../models/HelpMessage';
 @Injectable({
   providedIn: 'root'
 })
-export class LoginServiceService {
+export class AccountService {
 
   constructor(private http: HttpClient) { }
 
   public login(username: string, password: string) {
     console.log('executed service "login-service" with method login');
-    const headers = new HttpHeaders({Authorization: 'Basic ' + btoa(username + ':' + password)})
+    const headers = new HttpHeaders({Authorization: 'Basic ' + btoa(username + ':' + password)});
     return this.http.post(`http://localhost:8081/account/login`, {headers});
   }
 

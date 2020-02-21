@@ -1,4 +1,5 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {QuizService} from '../../../../services/quiz-service';
 
 @Component({
   selector: 'app-question',
@@ -26,14 +27,17 @@ export class QuestionComponent implements OnInit {
    */
   @Input() userAnswer;
   localUserAnswer = 'z';
+  /**
+   * Var ifAnswerIsCorrect indicates whether answer given by user is equal to right one
+   */
   ifAnswerIsCorrect;
 
-  constructor() {
+  constructor(private quizService: QuizService) {
   }
 
   ngOnInit() {
     /**
-     * This
+     * This code is executed only when question component is loaded into quiz-result component
      */
     if (this.isItResult) {
       this.localUserAnswer = this.userAnswer.answer;
@@ -52,7 +56,7 @@ export class QuestionComponent implements OnInit {
   }
 
   /**
-   * this method is responsible for collecting data about
+   * this method is responsible for collecting data about correctness of user answer
    * @param answer
    */
   checkAnswer(answer: string) {
@@ -66,6 +70,4 @@ export class QuestionComponent implements OnInit {
       return '#545454';
     }
   }
-
-
 }

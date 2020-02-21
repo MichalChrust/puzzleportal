@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginServiceService } from 'src/app/services/login-service.service';
+import { AccountService } from 'src/app/services/account.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,7 +13,7 @@ export class LogInComponent implements OnInit {
   password: string;
   message: any;
 
-  constructor(private service: LoginServiceService, private router: Router) { }
+  constructor(private service: AccountService, private router: Router) { }
 
   ngOnInit() {
   }
