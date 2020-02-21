@@ -14,7 +14,7 @@ export class HelpService {
 
 
   // eslint-disable-next-line
-  createCourse(helpMessage: HelpMessage) {
+  sendHelpMessage(helpMessage: HelpMessage) {
     console.log('executed service');
     // tslint:disable-next-line:ban-types
     return this.http.post<HelpMessage>(`http://localhost:8081/help`, helpMessage);
