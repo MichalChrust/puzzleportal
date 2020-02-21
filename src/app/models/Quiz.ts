@@ -1,9 +1,11 @@
+import {Question} from './Question';
+
 export class Quiz {
   id: number;
-  category: string;
+  questions: Array<Question>;
 
-  constructor(id: number, category: string) {
+  constructor(id: number, questions: Array<Question>) {
     this.id = id;
-    this.category = category;
+    this.questions = questions;
   }
 }

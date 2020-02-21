@@ -1,11 +1,11 @@
 <div class="list-group" style="margin-top: 10%">
 
-  <div *ngFor="let category of categories.categories">
+  <div *ngFor="let category of categories; let i = index">
     <p id="table-header" class="list-group-item list-group-item-text">{{category.category}}</p>
-    <div *ngFor="let game of games; let i = index;" >
-      <a *ngIf="game.category == category.id;" (click)='go(i)'
+    <div *ngFor="let game of games; let j = index;" >
+      <a *ngIf="game.category == category.id;" (click)='go(j)'
          class="list-group-item list-group-item-action list-group-item-success"
-         style="cursor: pointer">Quiz {{i +1}}</a>
+         style="cursor: pointer">{{game.name}}</a>
     </div>
   </div>
 </div>
