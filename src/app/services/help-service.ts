@@ -12,7 +12,6 @@ export class HelpService {
 
   }
 
-
   // eslint-disable-next-line
   sendHelpMessage(helpMessage: HelpMessage) {
     console.log('executed service "help-service" with method sendHelpMessage');

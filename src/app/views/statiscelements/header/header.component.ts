@@ -6,7 +6,7 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  @Input() isUserLogged: boolean;
+  isUserLogged: boolean;
   mainPage = 'Strona Główna';
   allGames = 'Wszystkie Gry';
   rank = 'Ranking';

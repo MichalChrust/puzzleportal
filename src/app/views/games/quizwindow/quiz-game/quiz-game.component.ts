@@ -8,8 +8,17 @@ import {Router} from '@angular/router';
   styleUrls: ['./quiz-game.component.css']
 })
 export class QuizGameComponent implements OnInit {
+  /**
+   * Quiz ID
+   */
   id;
+  /**
+   * Quiz data
+   */
   quiz;
+  /**
+   * Array of quiz answers
+   */
   answers: Answer[];
 
   constructor(private quizService: QuizService, private router: Router) {
@@ -17,9 +26,12 @@ export class QuizGameComponent implements OnInit {
 
   ngOnInit() {
     const data = history.state.data;
-    this.id = data['id'];
-    // TODO
-    // connect it with backend
+    this.id = data.id;
+    // @properLogic
+    this.quizService.getQuiz(this.id).subscribe((quiz) => {
+      this.quiz = quiz;
+    })
+    // mock @LukeHawthorne
     this.quiz = {
       id: this.id,
       questions: [
@@ -64,10 +76,7 @@ export class QuizGameComponent implements OnInit {
     this.answers = new Array(this.quiz.questions.length);
   }
   addAnswer(answerData: {id: number, answer: string}) {
-    console.log(answerData.id);
-    console.log(answerData.answer);
     this.answers[answerData.id] = new Answer(answerData.id, answerData.answer);
-    console.log(this.answers);
   }
   showResults(id) {
     this.router.navigate(['/quizgame/' + id + '/results'], {state: {questions: this.quiz, answers: this.answers}});

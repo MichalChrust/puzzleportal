@@ -3,7 +3,7 @@
   <div style="padding-top: 3%; padding-bottom: 5%">
     <div>
       <div style="padding-left: 20%; padding-right: 20%">
-        <button [ngStyle]="{backgroundColor: ((!isItResult && choosedAnswer === 'a') ? '#213098' : colorAnswer('a'))}"
+        <button [ngStyle]="{backgroundColor: ((!isItResult && choosedAnswer === 'a') ? '#213098' : checkAnswer('a'))}"
                 class="btn btn-primary btn-block answer-button"
                 (click)="chooseAnswer(question.id, 'a')">
           {{question.a}}
@@ -12,7 +12,7 @@
     </div>
     <div style="padding-top: 2%">
       <div style="padding-left: 20%; padding-right: 20%">
-        <button [ngStyle]="{backgroundColor: ((!isItResult && choosedAnswer === 'b') ? '#213098' : colorAnswer('b'))}"
+        <button [ngStyle]="{backgroundColor: ((!isItResult && choosedAnswer === 'b') ? '#213098' : checkAnswer('b'))}"
                 class="btn btn-primary btn-block answer-button"
                 (click)="chooseAnswer(question.id,'b')">
           {{question.b}}
@@ -21,7 +21,7 @@
     </div>
     <div style="padding-top: 2%">
       <div style="padding-left: 20%; padding-right: 20%">
-        <button [ngStyle]="{backgroundColor: ((!isItResult && choosedAnswer === 'c') ? '#213098' : colorAnswer('c'))}"
+        <button [ngStyle]="{backgroundColor: ((!isItResult && choosedAnswer === 'c') ? '#213098' : checkAnswer('c'))}"
                 class="btn btn-primary btn-block answer-button"
                 (click)="chooseAnswer(question.id,'c')">
           {{question.c}}
@@ -30,7 +30,7 @@
     </div>
     <div style="padding-top: 2%">
       <div style="padding-left: 20%; padding-right: 20%">
-        <button [ngStyle]="{backgroundColor: ((!isItResult && choosedAnswer === 'd') ? '#213098' : colorAnswer('d'))}"
+        <button [ngStyle]="{backgroundColor: ((!isItResult && choosedAnswer === 'd') ? '#213098' : checkAnswer('d'))}"
                 class="btn btn-primary btn-block answer-button"
                 (click)="chooseAnswer(question.id,'d')">
           {{question.d}}

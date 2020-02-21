@@ -6,13 +6,24 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
   styleUrls: ['./question.component.css']
 })
 export class QuestionComponent implements OnInit {
+  /**
+   * Question data
+   */
   @Input() question;
+  /**
+   * Object responsible for sending data outside component to game-component
+   */
   @Output() choosedAnswerEmitter = new EventEmitter<{id: number, answer: string}>();
+
   choosedAnswer: string;
-  // used when print results
+  /**
+   * field used to check if is it question printed in result-component
+   */
   @Input() isItResult;
-  // userAnswer is external value for this component and can be null, to allow null value it is converted to localUserAnswer,
-  // which cannot be null
+  /**
+   * userAnswer is external value for this component and can be null, to allow null value it is converted to localUserAnswer,
+   * which cannot be null
+   */
   @Input() userAnswer;
   localUserAnswer = 'z';
   ifAnswerIsCorrect;
@@ -21,33 +32,30 @@ export class QuestionComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.question);
+    /**
+     * This
+     */
     if (this.isItResult) {
-      console.log(this.question.correct);
       this.localUserAnswer = this.userAnswer.answer;
       this.ifAnswerIsCorrect = (this.localUserAnswer === this.question.correct);
-      console.log(this.ifAnswerIsCorrect);
     }
   }
 
+  /**
+   * Method responsible for marking
+   * @param id
+   * @param answer
+   */
   chooseAnswer(id: number, answer: string) {
     this.choosedAnswer = answer;
     this.choosedAnswerEmitter.emit({id, answer});
   }
 
+  /**
+   * this method is responsible for collecting data about
+   * @param answer
+   */
   checkAnswer(answer: string) {
-    if (answer === this.question.correct) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
-  colorBlueOrRed() {
-
-  }
-
-  colorAnswer(answer: string) {
     if ((this.isItResult) && (this.localUserAnswer === answer) && (this.ifAnswerIsCorrect)) {
       return '#33cc33';
     } else if ((this.isItResult) && (this.localUserAnswer === answer) && (!this.ifAnswerIsCorrect)) {

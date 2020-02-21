@@ -12,17 +12,17 @@ export class LoginServiceService {
   public login(username: string, password: string) {
     console.log('executed service "login-service" with method login');
     const headers = new HttpHeaders({Authorization: 'Basic ' + btoa(username + ':' + password)})
-    return this.http.post(`http://localhost:8081/login`, {headers});
+    return this.http.post(`http://localhost:8081/account/login`, {headers});
   }
 
   public checkIfUserIsLogged() {
     console.log('executed service "login-service" with method checkIfUserIsLogged');
-    return this.http.get(`http://localhost:8081/userstatus`);
+    return this.http.get(`http://localhost:8081/account/userstatus`);
   }
 
-  logout(helpMessage: string) {
+  logout() {
     console.log('executed service "login-service" with method logout');
     // tslint:disable-next-line:ban-types
-    return this.http.post<HelpMessage>(`http://localhost:8081/help`, helpMessage);
+    return this.http.get(`http://localhost:8081/account/help`);
   }
 }
