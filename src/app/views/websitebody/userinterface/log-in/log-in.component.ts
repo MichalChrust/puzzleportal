@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AccountService } from 'src/app/services/account.service';
 import { Router } from '@angular/router';
+import {User} from '../../../../models/usermodels/User';
 
 @Component({
   selector: 'app-log-in',
@@ -11,18 +12,25 @@ export class LogInComponent implements OnInit {
 
   username: string;
   password: string;
-  message: any;
+  user: User;
 
-  constructor(private service: AccountService, private router: Router) { }
+  constructor(private accountService: AccountService, private router: Router) { }
 
   ngOnInit() {
   }
 
-  performLogin(){
-    let resp = this.service.login(this.username, this.password);
-    resp.subscribe(data => {
-      this.message = data;
-      this.router.navigate(["/home"]);
+  performLogin() {
+    console.log(this.username);
+    console.log(this.password);
+    this.accountService.login(this.username, this.password).subscribe((user) => {
+      console.log('local user before merge');
+      console.log(this.user);
+      console.log('sent user before merge');
+      console.log(user);
+      this.user = user;
+      console.log('local user after merge');
+      console.log(this.user);
+      // this.router.navigate(["/home"]);
     });
   }
 }

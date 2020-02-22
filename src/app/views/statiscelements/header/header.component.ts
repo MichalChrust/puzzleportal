@@ -27,7 +27,7 @@ export class HeaderComponent implements OnInit {
     //    this.isUserLogged = toBoolean(isUserLogged);
     //  });
     // mock @LukeHawthorne
-    this.isUserLogged = true;
+    this.isUserLogged = false;
   }
 
 }

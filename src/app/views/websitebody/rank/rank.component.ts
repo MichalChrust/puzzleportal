@@ -16,12 +16,9 @@ export class RankComponent implements OnInit {
 
   ngOnInit() {
     // @properLogic
-    console.log('@@@@@this.rankingService.getTopTen() method:');
     this.rankingService.getTopTen().subscribe((users) => {
       this.users = users;
       }
     );
-    console.log('@@@@@ Outside method');
-    console.log(this.users);
   }
 }

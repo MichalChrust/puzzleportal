@@ -26,11 +26,12 @@ export class QuizGameComponent implements OnInit {
 
   ngOnInit() {
     const data = history.state.data;
-    this.id = data;
+    this.quiz = data;
+    console.log(this.quiz);
     // @properLogic
-    this.quizService.getQuiz(this.id).subscribe((quiz) => {
-      this.quiz = quiz;
-    })
+    // this.quizService.getQuiz(this.id).subscribe((quiz) => {
+    //   this.quiz = quiz;
+    // })
     // mock @LukeHawthorne
     this.quiz = {
       id: this.id,
