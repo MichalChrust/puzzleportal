@@ -1,5 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {AccountService} from '../../../services/account.service';
+import {isBoolean} from 'util';
+import {toBoolean} from '@a.grisevich/ng-zorro-antd/src/core/util/convert';
 
 @Component({
   selector: 'app-header',
@@ -20,7 +22,12 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.isUserLogged = false;
+    // @ProperLogic
+    //  this.accountService.checkIfUserIsLogged().subscribe((isUserLogged) => {
+    //    this.isUserLogged = toBoolean(isUserLogged);
+    //  });
+    // mock @LukeHawthorne
+    this.isUserLogged = true;
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {QuizService} from '../../../../services/quiz-service';
 
 @Component({
   selector: 'app-quiz-results',
@@ -8,20 +9,23 @@ import { Component, OnInit } from '@angular/core';
 export class QuizResultsComponent implements OnInit {
   quiz;
   answers;
-  points: number;
+  points;
 
-  constructor() { }
+  constructor(private quizService: QuizService) { }
 
   ngOnInit() {
     this.quiz = history.state.questions;
     this.answers = history.state.answers;
-    console.log(this.quiz);
-    console.log(this.answers);
+    this.points = 0;
+    this.countResult();
+    this.quizService.sendResult(this.points).subscribe();
   }
 
   countResult() {
-    for (let i = 0; i < this.quiz.size; i++) {
-
+    for (let i = 0; i < this.quiz.questions.length; i++) {
+      if (this.quiz.questions[i].correct === this.answers[i].answer) {
+        this.points += 1;
+      }
     }
   }
 }

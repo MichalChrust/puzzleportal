@@ -17,7 +17,7 @@ export class AccountService {
 
   public checkIfUserIsLogged() {
     console.log('executed service "login-service" with method checkIfUserIsLogged');
-    return this.http.get(`http://localhost:8081/account/userstatus`);
+    return this.http.get(`http://localhost:8081/loggedUser`);
   }
 
   logout() {
