@@ -9,9 +9,9 @@
       </tr>
       </thead>
       <tbody style="text-align: center">
-      <tr class="table-row" *ngFor="let user of topTenList.topTen">
-        <td>{{user.position}}</td>
-        <td>{{user.nick}}</td>
+      <tr class="table-row" *ngFor="let user of users; let i = index">
+        <td>{{i + 1}}</td>
+        <td>{{user.username}}</td>
         <td>{{user.points}}</td>
       </tr>
       </tbody>

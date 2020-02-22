@@ -1,6 +1,7 @@
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import {HelpMessage} from '../models/HelpMessage';
+import {User} from '../models/usermodels/User';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,7 @@ export class AccountService {
   public login(username: string, password: string) {
     console.log('executed service "login-service" with method login');
     const headers = new HttpHeaders({Authorization: 'Basic ' + btoa(username + ':' + password)});
-    return this.http.post(`http://localhost:8081/account/login`, {headers});
+    return this.http.post(`http://localhost:8081/user`, {headers});
   }
 
   public checkIfUserIsLogged() {

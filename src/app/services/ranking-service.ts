@@ -1,6 +1,7 @@
 import {HttpClient} from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {RankingUser} from '../models/RankingUser';
+import {User} from '../models/usermodels/User';
+import {Observable} from 'rxjs';
 
 
 @Injectable({
@@ -14,9 +15,9 @@ export class RankingService {
 
 
   // eslint-disable-next-line
-  getTopTen() {
+  getTopTen(): Observable<User[]> {
     console.log('executed service "ranking-service" with method getTopTen');
     // tslint:disable-next-line:ban-types
-    return this.http.get<RankingUser>(`http://localhost:8081/ranking`);
+    return this.http.get<User[]>(`http://localhost:8081/user/ranked`);
   }
 }
